@@ -1,3 +1,4 @@
+#The data file contains entities/tokens with tags. An empty line divides sentences (elements in array)
 def read_data(file_path):
     tokens = []
     tags = []
@@ -32,7 +33,3 @@ def read_data(file_path):
 
     return tokens, tags
 
-
-train_tokens, train_tags = read_data('data/train.txt')
-validation_tokens, validation_tags = read_data('data/validation.txt')
-test_tokens, test_tags = read_data('data/test.txt')

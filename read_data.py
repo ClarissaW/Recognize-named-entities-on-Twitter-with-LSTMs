@@ -1,11 +1,13 @@
 #The data file contains entities/tokens with tags. An empty line divides sentences (elements in array)
+
+import io
 def read_data(file_path):
     tokens = []
     tags = []
     
     tweet_tokens = []
     tweet_tags = []
-    for line in open(file_path, encoding='utf-8'):
+    for line in io.open(file_path, encoding='utf-8'):
         
         line = line.strip()  #.strip() removes all whitespace at the start and end, including spaces, tabs, newlines and carriage returns.
         

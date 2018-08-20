@@ -88,7 +88,7 @@ def batches_generator(batch_size, tokens, tags, shuffle=True, allow_smaller_last
 ################################################  Evaluation  ################################################
 
 #from recsys.evaluation.decision import PrecisionRecallF1
-#from evaluation import precision_recall_f1
+from evaluation import precision_recall_f1
 # no module named evaluation???
 from sklearn.metrics import precision_recall_fscore_support
 
@@ -128,8 +128,8 @@ def eval_conll(model, session, tokens, tags, short_report=True):
         y_true.extend(ground_truth_tags + ['O'])
         y_pred.extend(predicted_tags + ['O'])
 
-#    results = precision_recall_f1(y_true, y_pred, print_results=True, short_report=short_report)
-    results = precision_recall_fscore_support(y_true, y_pred,average='weighted')
+    results = precision_recall_f1(y_true, y_pred, print_results=True, short_report=short_report)
+#    results = precision_recall_fscore_support(y_true, y_pred,average='weighted')
 
     return results
 

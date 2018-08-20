@@ -11,6 +11,8 @@
 #    learning_rate_ph - learning rate; we need this placeholder because we want to change the value during training
 
 
+##### ##### ##### ##### #####  Bi-Directional LSTM  ##### ##### ##### ##### ##### 
+
 """
     Command:  pip install --user tensorflow
     https://www.tensorflow.org/versions/master/api_docs/python/tf/placeholder
